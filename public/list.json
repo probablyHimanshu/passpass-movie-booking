@@ -1,0 +1,75 @@
+[
+    {
+        "id": 1,
+        "name": "jigra",
+        "title": "action,drama",
+        "price": 3,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0010.jpg"
+    },
+    {
+    "id": 2,
+        "name": "devara",
+        "title": "action,drama",
+        "price": 3,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0011.jpg"
+    },
+    {
+        "id": 3,
+        "name": "veetiyan",
+        "title": "action,thriller",
+        "price": 5,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0012.jpg"
+    },
+    {
+        "id": 4,
+        "name": "venom: the last dance",
+        "title": "action",
+        "price": 4,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0013.jpg"
+    },
+    {
+        "id": 5,
+        "name": "G.O.A.T: greatest of all time",
+        "title": "action,drama,syfy",
+        "price": 3,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0014.jpg"
+    },
+    {
+        "id": 6,
+        "name": "morbius",
+        "title": "magical,action",
+        "price": 4,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0015.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Raayan",
+        "title": "drama,thriller",
+        "price": 9,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0016.jpg"
+    },
+    {
+        "id": 8,
+        "name": "the lost city",
+        "title": "action,drama",
+        "price": 2,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0017.jpg"
+    },
+    {
+        "id": 9,
+        "name": "kantara",
+        "title": "drama,magical",
+        "price": 3,
+        "category": "new movie",
+        "image": "src/assets/IMG-20240923-WA0018.jpg"
+    }
+
+]

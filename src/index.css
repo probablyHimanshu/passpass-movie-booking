@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* VIBRANT ORANGE THEME FROM USER IMAGE (GoBus Aesthetic)
+   #FF6B00 - Vibrant Warm Orange / Primary Brand
+   #FF8533 - Amber Light Orange / Secondary Accent
+   #EA580C - Deep Burnt Orange
+   #181512 - Deep Warm Charcoal / Panel Background
+   #0C0A09 - Obsidian Near-Black
+*/
+:root {
+  --color-orange-primary: #FF6B00;
+  --color-orange-light: #FF8533;
+  --color-orange-deep: #EA580C;
+  --color-charcoal: #181512;
+  --color-obsidian: #0C0A09;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #0C0A09;
+  background-image: 
+    radial-gradient(circle at 10% 10%, rgba(255, 107, 0, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(234, 88, 12, 0.15) 0%, transparent 50%),
+    linear-gradient(180deg, #181512 0%, #0C0A09 100%);
+  background-attachment: fixed;
+  color: #fdfbf7;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  letter-spacing: -0.01em;
+}
+
+/* Page Transition Effects */
+.page-transition {
+  animation: pageFadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0C0A09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F1B17;
+  border-radius: 9999px;
+  border: 1px solid #FF6B00;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF6B00;
+}
+
+/* Surface Cards in GoBus Orange Palette */
+.pass-panel {
+  background: rgba(24, 21, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 107, 0, 0.22);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.8);
+}
+
+.pass-panel-glass {
+  background: rgba(24, 21, 18, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 107, 0, 0.35);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.9);
+}
+
+.pass-card {
+  background: rgba(24, 21, 18, 0.9);
+  border: 1px solid rgba(255, 107, 0, 0.22);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pass-card:hover {
+  border-color: #FF6B00;
+  box-shadow: 0 12px 30px rgba(255, 107, 0, 0.35);
+  transform: translateY(-3px);
+}
+
+/* Primary Button in GoBus Orange Palette */
+.btn-pass-primary {
+  background: linear-gradient(135deg, #FF6B00 0%, #FF8533 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 18px rgba(255, 107, 0, 0.45);
+  transition: all 0.25s ease;
+}
+
+.btn-pass-primary:hover {
+  background: linear-gradient(135deg, #FF7A1A 0%, #FFA05C 100%);
+  box-shadow: 0 6px 24px rgba(255, 107, 0, 0.65);
+  transform: translateY(-1px);
+}
+
+/* Crystal Clear Image Presentation */
+.crystal-clear-img {
+  image-rendering: auto;
+  filter: contrast(1.04) brightness(1.02);
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* QR Scanner Animations */
+@keyframes scanBeamPass {
+  0% {
+    top: 2%;
+    opacity: 0.9;
+  }
+  50% {
+    top: 96%;
+    opacity: 1;
+  }
+  100% {
+    top: 2%;
+    opacity: 0.9;
+  }
+}
+
+@keyframes pulseGlowPass {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(255, 107, 0, 0.25), inset 0 0 15px rgba(255, 133, 51, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(255, 107, 0, 0.55), inset 0 0 25px rgba(255, 133, 51, 0.3);
+  }
+}
+
+.qr-scanner-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #14110E;
+  border: 1.5px solid rgba(255, 107, 0, 0.5);
+  animation: pulseGlowPass 3s infinite ease-in-out;
+}
+
+.qr-scan-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #FFFFFF, #FF8533, #FF6B00, transparent);
+  box-shadow: 0 0 14px #FFFFFF, 0 0 26px #FF6B00;
+  animation: scanBeamPass 2.3s infinite ease-in-out;
+  z-index: 10;
+}
+
+/* Screen Arc */
+.screen-arc {
+  width: 100%;
+  max-width: 520px;
+  height: 6px;
+  background: linear-gradient(90deg, transparent 0%, #FF6B00 25%, #FFA05C 50%, #FF6B00 75%, transparent 100%);
+  border-radius: 9999px;
+  box-shadow: 0 0 26px rgba(255, 107, 0, 0.75);
+  margin: 0 auto;
+}
+
+/* Cinematic Auth Transitions */
+@keyframes authCardEntrance {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(14px);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes authCardExit {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.03) translateY(-10px);
+    filter: blur(8px);
+  }
+}
+
+@keyframes authSuccessPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.35);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 45px rgba(255, 107, 0, 0.75);
+  }
+}
+
+@keyframes shakeAlert {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-5px); }
+  40%, 80% { transform: translateX(5px); }
+}
+
+.auth-card-animate {
+  animation: authCardEntrance 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.auth-card-exit-animate {
+  animation: authCardExit 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.auth-success-badge {
+  animation: authSuccessPulse 2s infinite ease-in-out;
+}
+
+.animate-shake {
+  animation: shakeAlert 0.4s ease-in-out;
+}
+
+/* Subtle Cinema Ambient Backdrop with warm orange glow */
+.cinema-backdrop-glow {
+  background: radial-gradient(circle at 50% 40%, rgba(255, 107, 0, 0.18) 0%, rgba(24, 21, 18, 0.65) 45%, rgba(12, 10, 9, 0.95) 100%);
+}
